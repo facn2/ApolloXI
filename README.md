@@ -1,6 +1,6 @@
 # ApolloXI
 
-To be up to date with new Movies around the world click [here](https://facn2.github.io/ApolloXI/).
+To be up to date with new Movies around the world click [here](https://facn2.github.io/ApolloXI/public/).
 
 ## WHY!
 
