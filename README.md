@@ -1,6 +1,6 @@
 # ApolloXI
 
-To be up to date with new Movies around the world click [here](web).
+To be up to date with new Movies around the world click [here](https://facn2.github.io/ApolloXI/).
 
 ## WHY!
 
@@ -8,7 +8,7 @@ Create a website to showcase the new movies around the world.
 
 ## WHAT!
 
-Website that has an 'Title', 'Search Bar', 'Wikipedia', 'Youtube' and 'Contact' page.
+Website that has a 'Title', 'Search Bar', 'Wikipedia', 'Youtube' and 'Contact' page.
 
 ## HOW!
 
@@ -16,7 +16,7 @@ We have created a series of goals detailed below. We will work in pairs to compl
 
 ### Goals before start working
 * Research - APIs for Wikipedia and Youtube
-* Create - Headline plans and wireframe for the Webpage
+* Create - Structure plans and wireframe for the Webpage
 * Tests - javaScript functions codes
 
 ### Goals for Webpage
