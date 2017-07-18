@@ -1,0 +1,27 @@
+{
+  "name": "apolloxi",
+  "version": "1.0.0",
+  "description": "Api Website",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "nyc istanbul cover tape test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facn2/ApolloXI.git"
+  },
+  "author": "Katia, Vered, Stefano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facn2/ApolloXI/issues"
+  },
+  "homepage": "https://github.com/facn2/ApolloXI#readme",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.7.0"
+  }
+}
