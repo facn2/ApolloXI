@@ -47,6 +47,7 @@ function showResponse(response) {
     console.log(element);
     videoList.appendChild(createIframe(element));
   })
+  console.log(youTubeDiv);
   youTubeDiv.appendChild(videoList);
 }
 
@@ -92,9 +93,11 @@ var createIframe = function(element) {
   // var ytPlace = document.querySelector(".youTube");
   var videoId = element.id.videoId;
   console.log(videoId);
+  console.log(videoNode);
   var ytIframe = document.createElement("iframe");
   ytIframe.src = "https://www.youtube.com/embed/" + videoId;
   videoNode.appendChild(ytIframe);
+  console.log(videoNode);
   // var urlId = ite
   // ytIframe.src = "https://www.youtube.com/embed/" +
   return videoNode;
