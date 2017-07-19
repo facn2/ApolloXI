@@ -26,8 +26,8 @@ ul {
   list-style: none;
 }
 iframe {
-  width: 60em;
-  height: 40em;
+  width: 50em;
+  height: 35em;
 }
 button{
 padding: 10px 15px;
@@ -45,6 +45,7 @@ border-radius: 15px;
   #wikiAbstract, #wikiTitle {
     width: 100%;
     margin: 2em auto;
+    align: center;
   }
   #title-main {
     width: auto;
@@ -57,6 +58,7 @@ border-radius: 15px;
   iframe {
     width: auto;
     height: auto;
+    align: center;
   }
   img {
     width: 30%;
