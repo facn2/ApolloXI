@@ -1,4 +1,66 @@
+html {
+  text-align: center;
+}
 body {
-  font-family: helvetica;
-  background: linear-gradient(to right, #b4b6d4, #2d0000);
+  font-family: 'Comfortaa', cursive;
+  background: #D6FCDB;
+  text-align: center;
+  margin-top: 3em;
+}
+img {
+  width: 10em;
+}
+#title-main {
+  font-size: 3em;
+  text-align: center;
+}
+/*marquee {
+  background-color: #ECDFE9;
+  width: 40em;
+  font-size: 1.2em;
+  padding: 0.3em;
+  margin: 2em auto;
+}*/
+form {
+  width: 50em;
+  margin: 2em auto;
+}
+input {
+  font-size: 1.2em;
+  font-family: 'Comfortaa', cursive;
+}
+button{
+padding: 10px 15px;
+color: #fff;
+background-color: #4682b4;
+border-radius: 15px;
+}
+
+#wikiAbstract, #wikiTitle {
+  width: 75%;
+  margin: 2em auto;
+  text-align: center;
+}
+@media screen and (max-width: 765px) {
+  #wikiAbstract, #wikiTitle {
+    width: 100%;
+    margin: 2em auto;
+  }
+  #title-main {
+    width: auto;
+    margin: 1.2em auto;
+    font-size: 1.5em;
+  }
+  #sub-title {
+    font-size: 1em;
+  }
+  img {
+    width: 30%;
+  }
+  form {
+    width: auto;
+  }
+  input {
+    font-size: 0.8em;
+  }
 }
