@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta author="Katia, Vered & Stefano" />
+    <meta author="Katia, Vered and Stefano" />
     <meta description="A site to check news and twitter of someone" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -12,18 +12,21 @@
     <div id="container">
       <h1>Find videos and Wikipedia articles about anything</h1>
       <div id="search_container">
-        <form action="" id="search-someone">
+        <form action="" id="search-something">
           <label for="description"></label>
           <input type="text" name="description" id="description" value="" placeholder="Search for someone" required>
-          <input type="submit" name="submitbutton" value="Submit">
+          <input id="submit" type="submit" name="submitbutton" value="Submit">
         </form>
       </div>
       <div class="search-results">
-
+        <div>
+          <h3 id="wikiTitle"></h3>
+          <p id="wikiAbstract"></p>
+        </div>
       </div>
     </div>
-    <script type="text/javascript" src="./keys.js"></script>
+    <!-- <script type="text/javascript" src="./keys.js"></script> -->
     <script type="text/javascript" src="./script.js"></script>
-    <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=init"></script>
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=init"></script> -->
   </body>
 </html>
