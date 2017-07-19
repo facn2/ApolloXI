@@ -7,13 +7,23 @@ var userInput = document.querySelector("#description");
 userInput.focus();
 
 wikiCall.onreadystatechange = function() {
-    if (wikiCall.readyState == 4 && wikiCall.status == 200) {
-      var wikiObj = JSON.parse(wikiCall.responseText);
-      var title = wikiObj.query.pages[Object.keys(wikiObj.query.pages)[0]].title;
-      wikiTitle.innerText = title;
-      var abstract = wikiObj.query.pages[Object.keys(wikiObj.query.pages)[0]].extract;
+  console.log(wikiCall.readyState);
+  console.log(wikiCall.status);
+  if (wikiCall.readyState == 4 && wikiCall.status == 200) {
+    var wikiObj = JSON.parse(wikiCall.responseText);
+    var title = wikiObj.query.pages[Object.keys(wikiObj.query.pages)[0]].title;
+    wikiTitle.innerText = title;
+    var abstract = wikiObj.query.pages[Object.keys(wikiObj.query.pages)[0]].extract;
+    if (abstract == "undefined") {
+      wikiAbstract.innerText = "I'm sorry, what you searched for is not available. Please try something else.";
+    }
+    else {
       wikiAbstract.innerText = abstract;
-    };
+    }
+  };
+  else {
+    /*something*/
+  }
 };
 
 form.addEventListener("submit", function(event) {
@@ -34,13 +44,10 @@ function wikiRequest(userSearch) {
 
 // Helper function to display JavaScript value on HTML page.
 function showResponse(response) {
-  console.log(response)
   var videoList = document.createElement('ul');
   response.items.forEach(function(element){
-    console.log(element);
     videoList.appendChild(createIframe(element));
   })
-  console.log(youTubeDiv);
   youTubeDiv.replaceChild(videoList, youTubeDiv.firstChild);
 }
 
@@ -57,13 +64,11 @@ function onYouTubeApiLoad() {
 
 function youtubeSearch(userSearch) {
   //Prepare the request
-  console.log("inputSearch: ", userSearch);
-
   var request = gapi.client.youtube.search.list({
     part: "snippet",
     type: "video",
     maxResults: 5,
-    // order: "viewCount",
+    // order: "relevance",    /*default value is relevance*/
     q: userSearch, /*input from search form*/
   });
 
@@ -73,19 +78,11 @@ function youtubeSearch(userSearch) {
 }
 
 var createIframe = function(element) {
-  console.log(element);
   var videoNode = document.createElement('li');
   videoNode.setAttribute("class", "iframe");
-  //return element;
-  // var ytPlace = document.querySelector(".youTube");
   var videoId = element.id.videoId;
-  console.log(videoId);
-  console.log(videoNode);
   var ytIframe = document.createElement("iframe");
   ytIframe.src = "https://www.youtube.com/embed/" + videoId;
   videoNode.appendChild(ytIframe);
-  console.log(videoNode);
-  // var urlId = ite
-  // ytIframe.src = "https://www.youtube.com/embed/" +
   return videoNode;
 }
