@@ -35,8 +35,8 @@ function wikiRequest(userSearch) {
 // Helper function to display JavaScript value on HTML page.
 function showResponse(response) {
     console.log(response)
-    var youtubeResponse = JSON.parse(response);
-    console.log(youtubeResponse);
+  //  var youtubeResponse = JSON.parse(response);
+  //  console.log(youtubeResponse);
 }
 
 //append to youtube src
