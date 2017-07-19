@@ -20,7 +20,7 @@ wikiCall.onreadystatechange = function() {
     else {
       wikiAbstract.innerText = abstract;
     }
-  };
+  } 
   // else {
   //   /*something*/
   // }
