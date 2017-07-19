@@ -39,4 +39,3 @@ Thumbs.db
 node_modules/
 .nyc_output/
 coverage/
-/keys.js

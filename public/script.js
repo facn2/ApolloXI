@@ -5,6 +5,8 @@ var submit = document.querySelector("#submit");
 var form = document.getElementById("search-something");
 var wikiCall = new XMLHttpRequest();
 var youTube = document.querySelector("#description");
+var userInput = document.querySelector("#description");
+userInput.focus();
 
 wikiCall.onreadystatechange = function() {
     if (wikiCall.readyState == 4 && wikiCall.status == 200) {
@@ -18,7 +20,7 @@ wikiCall.onreadystatechange = function() {
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
-    var userSearch = document.querySelector("#description").value;
+    var userSearch = userInput.value;
     form.reset();
     wikiRequest(userSearch);
     youtubeSearch(userSearch);
