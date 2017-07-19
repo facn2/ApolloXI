@@ -41,7 +41,7 @@ function init() {
   //youtube api is ready
 }
 
-function onYoutubeApiLoad() {
+function onYouTubeApiLoad() {
   gapi.client.setApiKey(ytApiKey);
   youtubeSearch();
 }
