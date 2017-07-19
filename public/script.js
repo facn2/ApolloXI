@@ -7,14 +7,11 @@ var userInput = document.querySelector("#description");
 userInput.focus();
 
 wikiCall.onreadystatechange = function() {
-  console.log(wikiCall.readyState);
-  console.log(wikiCall.status);
   if (wikiCall.readyState == 4 && wikiCall.status == 200) {
     var wikiObj = JSON.parse(wikiCall.responseText);
     var title = wikiObj.query.pages[Object.keys(wikiObj.query.pages)[0]].title;
     wikiTitle.innerText = title;
     var abstract = wikiObj.query.pages[Object.keys(wikiObj.query.pages)[0]].extract;
-    console.log(abstract);
     if (abstract === undefined || abstract === null) {
       wikiAbstract.innerText = "I'm sorry, what you searched for is not available. Please try something else.";
     }
@@ -22,9 +19,9 @@ wikiCall.onreadystatechange = function() {
       wikiAbstract.innerText = abstract;
     }
   }
-  // else {
-  //   /*something*/
-  // }
+  else {
+    wikiAbstract.innerText = "The page you are looking for is not available. Try later."
+  }
 };
 
 form.addEventListener("submit", function(event) {
@@ -74,7 +71,7 @@ function youtubeSearch(userSearch) {
   });
 
   // Send the request to the API server,
-  // and invoke onSearchRepsonse() with the response.
+  // and invoke showRepsonse() with the response.
   request.execute(showResponse);
 }
 
