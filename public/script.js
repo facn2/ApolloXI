@@ -26,6 +26,47 @@ form.addEventListener("submit", function(event) {
 });
 
 
+// //YOUTUBE
+//
+// // Helper function to display JavaScript value on HTML page.
+// function showResponse(response) {
+//     var  = JSON.parse(response);
+// }
+//
+// //append to youtube src
+// function init() {
+//   gapi.client.load("youtube", "v3", onYouTubeApiLoad)
+//   //youtube api is ready
+// }
+//
+// function onYoutubeApiLoad() {
+//   gapi.client.setApiKey(ytApiKey);
+//   youtubeSearch();
+// }
+//
+// function youtubeSearch() {
+//   //Prepare the request
+//   var request = gapi.client.youtube.search.list({
+//     part: "snippet",
+//     type: "video",
+//     maxResults: 5,
+//     order: "viewCount",
+//     q: inputSearch, /*input from search form*/
+//   });
+//
+//   // Send the request to the API server,
+//   // and invoke onSearchRepsonse() with the response.
+//   request.execute(onSearchResponse);
+// }
+//
+// // Called automatically with the response of the YouTube API request.
+// function onSearchResponse(response) {
+//     showResponse(response);
+//     console.log(response)
+// }
+
+
+
 
 
 
