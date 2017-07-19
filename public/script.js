@@ -41,7 +41,7 @@ function showResponse(response) {
     videoList.appendChild(createIframe(element));
   })
   console.log(youTubeDiv);
-  youTubeDiv.replaceChild(videoList);
+  youTubeDiv.replaceChild(videoList, youTubeDiv.firstChild);
 }
 
 //append to youtube src
