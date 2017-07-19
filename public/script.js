@@ -45,7 +45,7 @@ function showResponse(response) {
 
   response.items.forEach(function(element){
     console.log(element);
-    //videoList.appendChild(createIframe(element));
+    videoList.appendChild(createIframe(element));
   })
 }
 
@@ -84,7 +84,7 @@ function youtubeSearch(userSearch) {
 // }
 
 var createIframe = function(element) {
-//  console.log(element);
+  console.log(element);
   //return element;
   // var ytPlace = document.querySelector(".youTube");
   // var ytIframe = document.createElement("iframe");
