@@ -2,34 +2,43 @@
 <html lang="en">
   <head>
     <meta author="Katia, Vered and Stefano" />
-    <meta description="A site to check news and twitter of someone" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta description="A site to check Youtube and Wikipedia"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="utf-8">
     <title>Wikipedia/You Tube</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
   </head>
   <body>
-    <div id="container">
-      <h1>Find videos and Wikipedia articles about anything</h1>
-      <div id="search_container">
+
+      <h1 id="title-main">ApolloXI</h1>
+      <img type="image/png" src="../images/Apollo.png" alt="Apollo Logo">
+    </br>
+      <h2 id="sub-title">Find videos and Wikipedia articles about anything</h2>
+      <div id="search-container">
         <form action="" id="search-something">
           <label for="description"></label>
           <input type="text" name="description" id="description" value="" placeholder="Search for someone" required>
-          <input id="submit" type="submit" name="submitbutton" value="Submit">
+          <button id="submit" type="submit" name="submitbutton" value="Search">Search<i class="fa fa-send"></i></button>
         </form>
-      </div>
-      <div class="search-results">
+      </div> <!--search container-->
+
+      <section class="search-results">
+
         <div class="wikipedia">
           <h3 id="wikiTitle"></h3>
           <p id="wikiAbstract"></p>
-        </div>
+        </div> <!--wikipedia-->
+
         <div class="youTube">
 
-        </div>
-      </div>
-    </div>
-    <!-- <script type="text/javascript" src="./keys.js"></script> -->
+        </div> <!--youtube-->
+      </section>
+
+    <script type="text/javascript" src="./keys.js"></script>
     <script type="text/javascript" src="./script.js"></script>
-    <!-- <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=init"></script> -->
+    <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=init"></script>
   </body>
 </html>
