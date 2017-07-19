@@ -21,9 +21,9 @@ wikiCall.onreadystatechange = function() {
       wikiAbstract.innerText = abstract;
     }
   };
-  else {
-    /*something*/
-  }
+  // else {
+  //   /*something*/
+  // }
 };
 
 form.addEventListener("submit", function(event) {
