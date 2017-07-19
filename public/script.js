@@ -4,7 +4,7 @@ var wikiTitle = document.querySelector("#wikiTitle");
 var submit = document.querySelector("#submit");
 var form = document.getElementById("search-something");
 var wikiCall = new XMLHttpRequest();
-var youTube = document.querySelector("#description");
+var youTubeDiv = document.querySelector(".youTube");
 var userInput = document.querySelector("#description");
 userInput.focus();
 
@@ -47,6 +47,7 @@ function showResponse(response) {
     console.log(element);
     videoList.appendChild(createIframe(element));
   })
+  youTubeDiv.appendChild(videoList);
 }
 
 //append to youtube src
@@ -68,7 +69,7 @@ function youtubeSearch(userSearch) {
     part: "snippet",
     type: "video",
     maxResults: 5,
-    order: "viewCount",
+    // order: "viewCount",
     q: userSearch, /*input from search form*/
   });
 
