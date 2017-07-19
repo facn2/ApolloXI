@@ -20,12 +20,15 @@ form.addEventListener("submit", function(event) {
     event.preventDefault();
     var userSearch = document.querySelector("#description").value;
     form.reset();
-    var urlWiki = "https://en.wikipedia.org/w/api.php?format=json&action=query&origin=*&prop=extracts&exintro=&explaintext=&titles=" + userSearch +"";
-    wikiCall.open("GET", urlWiki, true);
-    wikiCall.send();
+    wikiRequest(userSearch);
+    youtubeSearch(userSearch);
 });
 
-
+function wikiRequest(userSearch) {
+  var urlWiki = "https://en.wikipedia.org/w/api.php?format=json&action=query&origin=*&prop=extracts&exintro=&explaintext=&titles=" + userSearch +"";
+  wikiCall.open("GET", urlWiki, true);
+  wikiCall.send();
+}
 
 //YOUTUBE
 
@@ -43,17 +46,19 @@ function init() {
 
 function onYouTubeApiLoad() {
   gapi.client.setApiKey(ytApiKey);
-  youtubeSearch();
+  // youtubeSearch();
 }
 
-function youtubeSearch() {
+function youtubeSearch(userSearch) {
   //Prepare the request
+  console.log("inputSearch: ", userSearch);
+
   var request = gapi.client.youtube.search.list({
     part: "snippet",
     type: "video",
     maxResults: 5,
     order: "viewCount",
-    q: inputSearch, /*input from search form*/
+    q: userSearch, /*input from search form*/
   });
 
   // Send the request to the API server,
