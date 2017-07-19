@@ -15,7 +15,7 @@ wikiCall.onreadystatechange = function() {
     wikiTitle.innerText = title;
     var abstract = wikiObj.query.pages[Object.keys(wikiObj.query.pages)[0]].extract;
     console.log(abstract);
-    if (abstract == "undefined") {
+    if (abstract === undefined || abstract === null) {
       wikiAbstract.innerText = "I'm sorry, what you searched for is not available. Please try something else.";
     }
     else {
