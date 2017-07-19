@@ -36,9 +36,16 @@ function wikiRequest(userSearch) {
 
 // Helper function to display JavaScript value on HTML page.
 function showResponse(response) {
-    console.log(response)
+  console.log(response)
+  var videoList = document.createElement('ul');
   //  var youtubeResponse = JSON.parse(response);
   //  console.log(youtubeResponse);
+  // var counter=0;
+  // createIframe(response.items);
+
+  response.items.forEach(function(element){
+    videoList.appendChild(createIframe(element));
+  })
 }
 
 //append to youtube src
@@ -75,11 +82,15 @@ function youtubeSearch(userSearch) {
 //     console.log(response)
 // }
 
+var createIframe = function(element) {
+  console.log(element);
+  // var ytPlace = document.querySelector(".youTube");
+  // var ytIframe = document.createElement("iframe");
+  // ytPlace.appendChild(ytIframe);
+  // var urlId = ite
+  // ytIframe.src = "https://www.youtube.com/embed/" +
 
-
-
-
-
+}
 
   //
   //
