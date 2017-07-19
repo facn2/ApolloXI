@@ -85,13 +85,14 @@ function youtubeSearch(userSearch) {
 
 var createIframe = function(element) {
   console.log(element);
+  var videoNode = document.createElement('li');
   //return element;
   // var ytPlace = document.querySelector(".youTube");
   // var ytIframe = document.createElement("iframe");
   // ytPlace.appendChild(ytIframe);
   // var urlId = ite
   // ytIframe.src = "https://www.youtube.com/embed/" +
-
+  return videoNode;
 }
 
   //
