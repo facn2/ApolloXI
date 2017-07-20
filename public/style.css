@@ -15,7 +15,7 @@ img {
   text-align: center;
 }
 form {
-  width: 50em;
+  width: 50%;
   margin: 2em auto;
 }
 input {
@@ -28,8 +28,8 @@ ul {
   list-style-type: none;
 }
 iframe {
-  width: 50em;
-  height: 35em;
+  width: auto;
+  height: auto;
 }
 
 .iframe {
