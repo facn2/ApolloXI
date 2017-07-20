@@ -12,7 +12,7 @@ wikiCall.onreadystatechange = function() {
     showWikiResults(wikiObj);
   }
   else {
-    wikiAbstract.innerText = "The page you are looking for is not available. Try later."
+    wikiAbstract.innerText = "Waiting for response. If the request takes too long, click <a href='https://facn2.github.io/ApolloXI/public/'>here</a>."
   }
 };
 
