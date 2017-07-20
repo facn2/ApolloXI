@@ -1,18 +1,24 @@
 # ApolloXI
 
-To be up to date with new Movies around the world click [here](https://facn2.github.io/ApolloXI/public/).
+To read information from Wikipedia and watch YouTube videos about a topic click [here](https://facn2.github.io/ApolloXI/public/).
 
-## WHY!
+## WHY?
 
-Create a website to showcase the new movies around the world.
+Create a website to showcase information and videos about anything you want.
 
-## WHAT!
+## WHAT?
 
-Website that has a 'Title', 'Search Bar', 'Wikipedia', 'Youtube' and 'Contact' page.
+Website that has a 'Title', 'Search Bar', 'Wikipedia', and 'Youtube' sections.
 
-## HOW!
+## HOW?
 
 We have created a series of goals detailed below. We will work in pairs to complete each goal.
+
+### User Stories:
+#### As a user I would like to:
+* read information about topics I am interested in
+* watch movies about the same topics
+* search for any topic I like
 
 ### Goals before start working
 * Research - APIs for Wikipedia and Youtube
@@ -21,6 +27,5 @@ We have created a series of goals detailed below. We will work in pairs to compl
 
 ### Goals for Webpage
 * Headline - quick search for movies.
-* Navigation bar - links to Search , Wikipedia , Youtube
+* Different sections - Wikipedia and Youtube
 * Responsive - the website works well on all devices
-* Form - Including name, email and message
