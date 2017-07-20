@@ -32,10 +32,6 @@ iframe {
   height: auto;
 }
 
-.iframe {
-  float:left;
-}
-
 button{
 padding: 10px 15px;
 color: #fff;
@@ -61,6 +57,9 @@ border-radius: 15px;
   }
   #sub-title {
     font-size: 1em;
+  }
+  .iframe {
+    float: left;
   }
   iframe {
     width: auto;
