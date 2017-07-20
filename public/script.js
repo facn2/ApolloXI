@@ -1,6 +1,6 @@
 var wikiTitle = document.querySelector("#wikiTitle");
 var submit = document.querySelector("#submit");
-var form = document.getElementById("search-something");
+var form = document.querySelector("#search-something");
 var wikiCall = new XMLHttpRequest();
 var youTubeDiv = document.querySelector(".youTube");
 var userInput = document.querySelector("#description");
