@@ -9,15 +9,7 @@ userInput.focus();
 wikiCall.onreadystatechange = function() {
   if (wikiCall.readyState == 4 && wikiCall.status == 200) {
     var wikiObj = JSON.parse(wikiCall.responseText);
-    var title = wikiObj.query.pages[Object.keys(wikiObj.query.pages)[0]].title;
-    wikiTitle.innerText = title;
-    var abstract = wikiObj.query.pages[Object.keys(wikiObj.query.pages)[0]].extract;
-    if (abstract === undefined || abstract === null) {
-      wikiAbstract.innerText = "I'm sorry, what you searched for is not available. Please try something else.";
-    }
-    else {
-      wikiAbstract.innerText = abstract;
-    }
+    showWikiResults(wikiObj);
   }
   else {
     wikiAbstract.innerText = "The page you are looking for is not available. Try later."
@@ -36,6 +28,17 @@ function wikiRequest(userSearch) {
   var urlWiki = "https://en.wikipedia.org/w/api.php?format=json&action=query&origin=*&prop=extracts&exintro=&explaintext=&titles=" + userSearch +"";
   wikiCall.open("GET", urlWiki, true);
   wikiCall.send();
+}
+
+function showWikiResults(wikiObj) {
+  wikiTitle.innerText = wikiObj.query.pages[Object.keys(wikiObj.query.pages)[0]].title;
+  var abstract = wikiObj.query.pages[Object.keys(wikiObj.query.pages)[0]].extract;
+  if (abstract === undefined || abstract === null) {
+    wikiAbstract.innerText = "I'm sorry, what you searched for is not available. Please try something else.";
+  }
+  else {
+    wikiAbstract.innerText = abstract;
+  }
 }
 
 //YOUTUBE
