@@ -15,7 +15,7 @@ img {
   text-align: center;
 }
 form {
-  width: 50em;
+  width: 50%;
   margin: 2em auto;
 }
 input {
@@ -24,11 +24,18 @@ input {
 }
 ul {
   list-style: none;
+  padding: 0;
+  list-style-type: none;
 }
 iframe {
-  width: 50em;
-  height: 35em;
+  width: auto;
+  height: auto;
 }
+
+.iframe {
+  float:left;
+}
+
 button{
 padding: 10px 15px;
 color: #fff;
